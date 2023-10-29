@@ -1,0 +1,134 @@
+.navbar{
+  background-color: #092644;
+  background-color: #333;
+    height: 15vh;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 32px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.logo .fn{
+    background-color: #fff;
+    color: #333;
+    border-radius: 1px 1rem;
+    display: inline-block;
+    padding: 0 .4rem;
+    margin-right: .2rem;
+}
+nav {
+    width: 30%;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+nav a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translate(-50%, -50%);
+    transition: all .5s ease;
+}
+nav a:hover::after{
+    width: 100%;
+}
+nav a.active::after{
+    width: 100%;
+}
+nav button{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .15s ease;
+    background-color: #ccc;
+    color: #092644;
+    display: none;
+}
+nav button:hover{
+    background-color: #aaa;
+}
+nav #sm-nav{
+    display: none;
+}
+@media screen and (max-width:1024px) {
+    .navbar{
+        height: 10vh;
+    }
+    nav {
+        width: 70%;
+        position: relative;
+    }
+   
+    .logo{
+        font-size: 18px;
+    }
+    .logo .fn{
+        border-radius: 1px 10px;
+        padding: 0 .2rem;
+    }
+    nav ul{
+        background-color: #333;
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-shadow: 0px 0px 10px #fff;
+        border-radius: 5px;
+        padding: 1rem 0;
+        display: block;
+        padding: 1rem;
+    }
+    nav #sm-nav{
+        display: none;
+    }
+    nav #lg-nav{
+        display: none;
+    }
+    nav #sm-nav.active-nav{
+        display: block;
+    }
+    nav a{
+        width: 100%;
+        display: inline-block;
+        padding: .5rem;
+    }
+    nav a:hover{
+        background-color: #444;
+    }
+    nav a.active{
+        background-color: #444;
+    }
+    nav a.active::after{
+        width: 100%;
+    }
+    nav button{
+        display: inline-block;
+    }
+    .hide-nav, .show-nav{
+        text-align: end;
+    
+    }
+}

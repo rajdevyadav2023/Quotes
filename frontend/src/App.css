@@ -1,0 +1,51 @@
+body{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f1f1ff;
+  
+}
+.quotes-list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.quote-box{
+  width: 40%;
+  padding: 2rem;
+  margin:1rem auto;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.quote-box h3{
+  color: #555;
+}
+.quote-box p{
+  margin-top: 1rem;
+  color: #555;
+}
+
+.heading{
+  color: #555;
+  background-color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem;
+}
+.preloader{
+  width: 95%;
+  text-align: center;
+  background-color: #fff;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+}
+/* media query */
+@media screen and (max-width:1024px) {
+  .quote-box{
+    width: 100%;
+  }
+}
